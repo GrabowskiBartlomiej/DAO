@@ -1,7 +1,5 @@
 package pl.coderslab.entity;
 
-import java.util.Arrays;
-
 public class Main {
 
     public static final String createTable = " CREATE TABLE users(id int(11) not null auto_increment, email varchar(255) not null unique ,\n" +
@@ -9,19 +7,14 @@ public class Main {
 
 
     public static void main(String[] args) {
-        User user = new User("bartek1@gmail.com","bartek","bartekhaslo");
+        User user = new User("bartek1@gmail.com", "bartek", "bartekhaslo");
         UserDao userDao = new UserDao();
-        //System.out.println("Dodawanie uzytkownika 1");
-       // userDao.create(user);
 
-        User user1 = new User("asia@gmail.com","asia","asia haslo");
-       // userDao.create(user1);
+        User user1 = new User("asia@gmail.com", "asia", "asia haslo");
 
-        User user2 = new User("wojtek@gmail.com","wojtek","wojtekmail");
-        //userDao.create(user2);
+        User user2 = new User("wojtek@gmail.com", "wojtek", "wojtekmail");
 
-        User user3 = new User("dousuniecia","dousuniecia","dousuniecia");
-        //userDao.create(user3);
+        User user3 = new User("dousuniecia", "dousuniecia", "dousuniecia");
 
         System.out.println("Metoda read()");
         userDao.read(2);
@@ -40,10 +33,9 @@ public class Main {
 
 
         User[] users = userDao.findAll();
-        for (User currentUser : users){
-            System.out.println("ID: "+currentUser.getId()+"\nUsername: "+currentUser.getUserName()+"\nPassword: "+currentUser.getPassword()+"\nEmail: "+ currentUser.getEmail());
+        for (User currentUser : users) {
+            System.out.println("ID: " + currentUser.getId() + "\nUsername: " + currentUser.getUserName() + "\nPassword: " + currentUser.getPassword() + "\nEmail: " + currentUser.getEmail());
         }
-
 
 
     }

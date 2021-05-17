@@ -9,7 +9,7 @@ public class DbUtil {
     private static final String DBuser = "root";
     private static final String DBpass = "coderslab";
 
-    public static Connection getConnection() throws SQLException{
-        return DriverManager.getConnection(DBlink,DBuser,DBpass);
+    public static Connection getConnection() throws SQLException {
+        return DriverManager.getConnection(DBlink, DBuser, DBpass);
     }
 }
